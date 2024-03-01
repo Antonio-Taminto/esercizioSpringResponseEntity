@@ -17,8 +17,8 @@ public class ProductController {
     private ProductService service;
     @PostMapping("/createproduct")
     public ResponseEntity<ProductEntity> createUser(@RequestBody ProductEntity productEntity){
-        service.addProduct(productEntity);
-        return ResponseEntity.ok().body(productEntity);
+        ProductEntity savedProduct = service.addProduct(productEntity);
+        return ResponseEntity.ok().body(savedProduct);
     }
     @GetMapping("/productbyid/{id}")
     public ResponseEntity<ProductEntity> getProductById(@PathVariable Long id){
