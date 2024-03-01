@@ -32,9 +32,9 @@ public class ProductService {
     public Optional<ProductEntity> updateProduct(Long id,ProductEntity productEntity){
         Optional<ProductEntity> productEntityOptional = repo.findById(id);
         if(productEntityOptional.isPresent()){
-            productEntityOptional.get().setNome(productEntity.getNome());
-            productEntityOptional.get().setDescrizione(productEntity.getDescrizione());
-            productEntityOptional.get().setPrezzo(productEntity.getPrezzo());
+            productEntityOptional.get().setName(productEntity.getName());
+            productEntityOptional.get().setDescription(productEntity.getDescription());
+            productEntityOptional.get().setPrice(productEntity.getPrice());
             repo.save(productEntityOptional.get());
             return productEntityOptional;
         }else {
@@ -47,7 +47,7 @@ public class ProductService {
     }
 
     public Optional<ProductEntity> findProductByNome(String nome){
-        Optional<ProductEntity> productEntityOptional = repo.findByNome(nome);
+        Optional<ProductEntity> productEntityOptional = repo.findByName(nome);
         if(productEntityOptional.isPresent()){
             return productEntityOptional;
         }else {

@@ -13,15 +13,15 @@ public class ProductEntity {
     @Id
     @GeneratedValue
     private Long id;
-    private String nome;
-    private String descrizione;
-    private BigDecimal prezzo;
+    private String name;
+    private String description;
+    private BigDecimal price;
 
-    public ProductEntity(Long id, String nome, String descrizione, BigDecimal prezzo) {
+    public ProductEntity(Long id, String name, String description, BigDecimal price) {
         this.id = id;
-        this.nome = nome;
-        this.descrizione = descrizione;
-        this.prezzo = prezzo;
+        this.name = name;
+        this.description = description;
+        this.price = price;
     }
 
     public ProductEntity() {
@@ -35,27 +35,27 @@ public class ProductEntity {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDescrizione() {
-        return descrizione;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public BigDecimal getPrezzo() {
-        return prezzo;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setPrezzo(BigDecimal prezzo) {
-        this.prezzo = prezzo;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 }
